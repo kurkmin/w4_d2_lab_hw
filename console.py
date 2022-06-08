@@ -13,6 +13,7 @@ artist_repo.save(artist1)
 artist2 = Artist("Elton")
 artist_repo.save(artist2)
 
+artist_repo.select(1)
 
 album = Album("Hello", "Pop")
 album_repo.save(album)
