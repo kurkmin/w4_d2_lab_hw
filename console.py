@@ -15,10 +15,12 @@ artist_repo.save(artist2)
 
 artist_repo.select(1)
 
-album = Album("Hello", "Pop")
+album = Album("Hello", "Pop", artist1)
 album_repo.save(album)
 
 album_repo.select_all()
 
+for album in album_repo.select_all():
+    print(album.__dict__)
 pdb.set_trace()
 
