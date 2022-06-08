@@ -21,7 +21,7 @@ def select_all():
 
     for row in results:
         artist = artist_repo.select(row['artist_id'])
-        albmum = Album(row['title'], user, row['genre'], row['id'] )
+        album = Album(row['title'], user, row['genre'], row['id'] )
         albums.append(album)
     return albums
 
@@ -35,7 +35,7 @@ def select(id):
     if result is not None:
         aritst = artist_repo.select(result['user_id'])
         album = Album(result['title'], result['genre'], result['id'])
-    return task
+    return album
 
 
 def delete_all():
